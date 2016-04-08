@@ -1,0 +1,6 @@
+Could not open or create temporary file 'Y:\zq9055\modem\modem_proc\mcfg\mcfg_ge
+n\generic\China\CT\modem_proc\mcfg\mcfg_gen\scripts\data\efs_files\ct\pdn_thrott
+ling_config.txt' No such file or directory at /<Y:\zq9055\modem\modem_proc\mcfg\
+build\build_mcfgs.exe>mcfg_write.pm line 1142.
+Generating XML file for Commercial-SRLTE-DSDS...
+Y:\zq9055\modem\modem_proc\mcfg\mcfg_gen\generic\China\CT>

@@ -1,0 +1,26 @@
+关于MSM8909单双卡配置切换，在case上要了一些资料，Android部分配置与MSM8x10没差别。Modem和NV上的配置，需要双印和伊君查看下：
+ 
+Modem Side：
+For W+G DSDX project:
+- Please use carrier_policy.xml in mmcp\policyman\configurations\Carrier\CU\CSFB+G_DSDS and copy it to EFS/policyman
+- Be sure WCDMA/GSM included in TOT/mode_pref
+- Be sure WCDMA band (NV946 & NV2954) enabled as your required on both SIM1 and SIM2
+ 
+For W Single SIM project:
+- Please use carrier_policy.xml in mmcp\policyman\configurations\Carrier\CU\CSFB_SS and copy it to EFS/policyman
+ <NvEfsFile mcfgAttributes="0x09" mcfgVariant="2" targetPath="/policyman/carrier_policy.xml" buildPath="modem_proc/mmcp/policyman/configurations/Carrier/KDDI/subsidized/carrier_policy.xml"/>
+
+
+- Be sure WCDMA/GSM included in TOT/mode_pref
+- Be sure WCDMA band (NV946 & NV2954) enabled as your required
+ 
+Android Side:
+Regarding to system property settings:
+----------
+setprop persist.multisim.config ssss
+setprop persist.multisim.config dsds
+----------
+ 
+ 
+NV Setting：
+refer to the Ch 5.2.2 in the SP80-NR964-4 for the NV setting.
